@@ -50,7 +50,7 @@ canvas.addEventListener("mousedown", function () { mouseon = true; });
 canvas.addEventListener("mouseup", function () { mouseon = false; });
 canvas.addEventListener("mousemove", function (event) {
     if (mouseon) {
-        fire.struct[Math.floor(event.clientY / canvas.style.height / canvas.height)][Math.floor(event.clientX / canvas.style.width / canvas.width)] = fire.mouseIntens;
+        fire.struct[Math.floor(event.clientY /  canvas.height * 10)][Math.floor(event.clientX /  canvas.width * 10)] = fire.mouseIntens;
     }
 });
 function anime() {
